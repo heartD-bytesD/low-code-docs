@@ -18,3 +18,9 @@ pnpm run build
 三者都是通过xxx.create()方法创建的，可以传入参数，以复制元素、页面和项目。
 
 其中，有id的均通过uuid生成唯一识别码（其实我觉得换成nanoid更好）。特别的，元素与其他有所区别，你会见到mId、mVersion，表明这是对应的物料id（Material ID）、物料版本（Material Version），
+
+## src/util.ts
+
+目前下面只有一个uuid生成器。
+
+## test
