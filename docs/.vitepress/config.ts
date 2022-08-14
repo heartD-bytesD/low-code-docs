@@ -1,6 +1,7 @@
 export default {
     title: "Low Code Doc",
     description: "Round round round.",
+    base: '/',
     lang: 'zh-CN',
     themeConfig: {
         siteTitle: "HeartD-ByteD",
