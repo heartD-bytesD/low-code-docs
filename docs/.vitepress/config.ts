@@ -8,8 +8,8 @@ export default {
             {
                 text: '我们的目标是星辰大海',
                 items: [
-                    { text: "项目大纲", link: "/intro/teze" },
-                    { text: "ToDos", link: "/todos" },
+                    { text: "项目大纲", link: "./intro/teze" },
+                    { text: "ToDos", link: "./todos" },
                     { text: "规范", link: "/guide" },
                     
                 ],
