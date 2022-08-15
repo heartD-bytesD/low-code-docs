@@ -3,7 +3,7 @@
 
 计划完成日期：2022-8-23
 
-进度：15%（一期）
+进度：20%（一期）
 ## 前言
 该文档为提高效率，协调团队合作而开发。任何成员均可提交更改本文档的内容，原则上根据团队意见进行修改。
 ## 项目概况
@@ -14,7 +14,7 @@
 - 前端框架：Vue3
 - 开发语言：TypeScript、Less、前端三件套
 - 打包工具：Vite、unbuild
-- UI库：Element Plus
+- UI库：Arco Design
 - 协作策略：Monorepo
 - 状态管理：Pinia + tiny-emitter
 - 路由管理：VueRouter + vite-plugin-pages

@@ -2,9 +2,8 @@ export default {
     title: "Low Code Doc",
     description: "Round round round.",
     base: '/low-code-docs/',
-    lang: 'zh-CN',
     themeConfig: {
-        siteTitle: "HeartD-ByteD",
+        siteTitle: "HeartD-BytesD",
         sidebar: [
             {
                 text: '我们的目标是星辰大海',
@@ -12,7 +11,6 @@ export default {
                     { text: "项目大纲", link: "/intro/teze" },
                     { text: "ToDos", link: "/todos" },
                     { text: "规范", link: "/guide" },
-                    
                 ],
             },
             
