@@ -26,16 +26,16 @@ export default {
                 ],
             },
 
-            // {
-            //     text: '示例',
-            //     items: [
-            //         { text: "编辑器", link: "/example/editor" },
-            //         { text: "项目结构", link: "/struct" },
-            //         { text: "ToDos", link: "/todos" },
-            //         { text: "规范", link: "/guide" },
+            {
+                text: '示例',
+                items: [
+                    { text: "如何创建模块", link: "/example/module" },
+                    // { text: "项目结构", link: "/struct" },
+                    // { text: "ToDos", link: "/todos" },
+                    // { text: "规范", link: "/guide" },
                     
-            //     ],
-            // }
+                ],
+            }
         ],
 
     },
