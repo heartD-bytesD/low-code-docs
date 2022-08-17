@@ -1,12 +1,12 @@
-## 书写规范
+# 书写规范
 ::: tip
 规范带有建议性，旨在协成团队风格一致、代码互通可读，避免被加入代码艺术大赏。
 :::
-### 使用语言
+## 使用语言
 
 本次项目使用Vue3的[setup语法糖](https://v3.cn.vuejs.org/api/sfc-script-setup.html) + TypeScript，样式则使用[Less](https://lesscss.org/)。
 
-### Vue
+## Vue
 
 三部分的顺序：
 
@@ -35,7 +35,7 @@ function onPropsChange(e: Event, key: string) {
 ```
 <br />
 
-### TypeScript
+## TypeScript
 `.ts`文件及`.vue`内`<script>`标签的内容，建议优先顺序为：
 - `export * `语句
 - `import`语句
