@@ -75,6 +75,8 @@ export default defineConfig({
 ```
 
 ## 设置`.vue`、`.ts`、`.css`
+此处，便是你设置真正内容的地方了！
+
 在vue设置布局，定义参数，如果是从其他模块复制过来，一定要注意各种改名，包括不限于`class`名、
 ::: details index.vue
 ```vue
@@ -140,7 +142,7 @@ export default {
 ```
 pnpm run build
 ```
-随后你可见dist下有`*.umd.js`格式文件，lc指LowCode，0.0.1为版本号，后面是模块名和后缀
+随后你可见dist下有`*.umd.js`后缀文件，lc指LowCode，跟随其模块名button，后面是版本号0.0.1和后缀
 
 ![](./images/example-5.jpg)
 ## 拖入编辑器的`public`文件夹
@@ -151,7 +153,7 @@ pnpm run build
 通过`utils.ts`的`loadScript`和`loadMaterial`（在`./src/store/project.ts`下调用），`*.umd.js`将被加载为物料。
 
 ## 配置到编辑器
-apps/editor/src/data下的`materials.ts`存储着EditorLeft物料栏里的信息。我们在image和title后追加一下信息，编辑器上将会出现该组件，并且
+apps/editor/src/data下的`materials.ts`存储着EditorLeft物料栏里的信息。我们在image和title后追加一下信息，编辑器上将会出现该组件。
 
 ```typescript{2,5,7,8,11,15}
     {

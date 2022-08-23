@@ -6,6 +6,10 @@
 
 本次项目使用Vue3的[setup语法糖](https://v3.cn.vuejs.org/api/sfc-script-setup.html) + TypeScript，样式则使用[Less](https://lesscss.org/)。
 
+
+## 格式化
+2个空格。
+
 ## Vue
 
 三部分的顺序：
