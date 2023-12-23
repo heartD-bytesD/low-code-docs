@@ -6,7 +6,7 @@ export default {
         siteTitle: "HeartD-BytesD",
         sidebar: [
             {
-                text: '我们的目标是星辰大海',
+                text: '引言',
                 items: [
                     { text: "项目大纲", link: "/intro/teze" },
                     { text: "ToDos", link: "/todos" },
