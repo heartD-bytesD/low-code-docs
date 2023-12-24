@@ -4,7 +4,7 @@
   "description": "VitePress driven document for low-code project co-opertation",
   "main": "index.ts",
   "scripts": {
-    "docs:dev": "vitepress dev docs",
+    "dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs"
   },
@@ -14,7 +14,7 @@
   "author": "ByteD-HeartD",
   "license": "ISC",
   "dependencies": {
-    "vitepress": "^1.0.0-alpha.4",
+    "vitepress": "^1.0.0-rc.32",
     "vue-ts": "^1.0.11"
   }
 }

@@ -11,6 +11,7 @@ export default {
                     { text: "项目大纲", link: "/intro/teze" },
                     { text: "ToDos", link: "/todos" },
                     { text: "规范", link: "/guide" },
+                    { text: "重构方案", link: "/chore" },
                 ],
             },
             
