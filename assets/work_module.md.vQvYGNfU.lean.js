@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a,R as o}from"./chunks/framework.V_Zt3J1u.js";const x=JSON.parse('{"title":"模块","description":"","frontmatter":{},"headers":[],"relativePath":"work/module.md","filePath":"work/module.md"}'),d={name:"work/module.md"},i=o("",11),r=[i];function n(s,c,p,l,h,_){return t(),a("div",null,r)}const m=e(d,[["render",n]]);export{x as __pageData,m as default};

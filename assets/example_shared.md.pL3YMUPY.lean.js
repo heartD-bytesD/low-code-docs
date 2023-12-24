@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as t}from"./chunks/framework.V_Zt3J1u.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"example/shared.md","filePath":"example/shared.md"}'),r={name:"example/shared.md"};function s(o,c,n,d,p,m){return a(),t("div")}const l=e(r,[["render",s]]);export{i as __pageData,l as default};
