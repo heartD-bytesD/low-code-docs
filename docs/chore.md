@@ -29,3 +29,22 @@
 ### 配置外置化
 
 编辑器不应有任何关于组件、package的配置，目前编辑器和packages是耦合在一起的，编辑器内置了组件的类型、ID、历史版本，这些信息后续都会放到packages配置组件的地方，确保一个组件的ID、版本号等唯一信息不要出现在两个地方。
+
+其实观察/editor/src/data下的文件，其中都是配置，合理的获取方式要么是后端传过来，要么是在组件仓库里，而不能与编辑器藕合在一块。
+
+由于source属性完全由id和version加上文件后缀组成，因此不需要这个属性了。
+
+整合后，插件包的核心属性如下：
+
+```javascript
+export default {
+    id: 'core', // 唯一id，支持同id的包对此进行扩展
+    version: '0.0.3', // 版本号
+    name: '基础组件', // 分类名
+    type: 'core', // 分类
+    components: {
+        'lc-button': () => import("./lc-button"),
+        'lc-image': () => import("./lc-image"),
+    }
+}
+```
