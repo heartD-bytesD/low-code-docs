@@ -48,3 +48,72 @@ export default {
     }
 }
 ```
+
+### 自动构建
+
+为提升第三方开发体验，需对现有的build模式改造。
+
+原先加载`umd.js`的方式为：构建完成后，手动拖到`editor/public`，再注册脚本，编辑器又根据预设好的物料对组件进行默认渲染。
+
+手动改自然是低效的，vite提供了指定打包路径的构建选项：
+
+```TypeScript
+import {defineConfig} from 'vite'
+import vue from '@vitejs/plugin-vue';
+import pkg from './package.json'
+
+export default defineConfig({
+    plugins: [vue()],
+    build: {
+        lib: {
+            entry: './src/index.ts',
+            name: 'core',
+            fileName: `${pkg.name.split('/')[1]}.${pkg.version}`,
+            formats: ['umd'],
+        },
+        cssCodeSplit: true,
+        outDir: '../../apps/editor/public' // [!code ++]
+    },
+})
+```
+
+这样就会构建到编辑器目录下。
+
+开发过程中，为减少反复手动build，我们给`vite build`加一个参数`--watch`：
+```json
+{
+  "name": "@lowcode512/core",
+  "version": "0.0.3",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build" // [!code --]
+    "build": "vite build --watch" // [!code ++]
+  },
+  "keywords": [
+    "low-code",
+    "typescript"
+  ],
+  "license": "MIT"
+}
+
+```
+
+到此，组件到编辑器的自动化链路就可用了。
+
+::: info
+后续还可尝试自动导入组件
+:::
