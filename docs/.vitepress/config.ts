@@ -1,6 +1,4 @@
-import { defineConfig } from 'vitepress'
-
-export default defineConfig({
+export default {
     title: "Low Code Doc",
     description: "Round round round.",
     base: '/low-code-docs/',
@@ -45,4 +43,4 @@ export default defineConfig({
         ],
 
     },
-});
+};
