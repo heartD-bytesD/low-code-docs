@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as t,R as r}from"./chunks/framework.M9wuz1B2.js";const u=JSON.parse('{"title":"需求分析","description":"","frontmatter":{},"headers":[],"relativePath":"requirement.md","filePath":"requirement.md"}'),o={name:"requirement.md"},n=r("",7),i=[n];function s(c,_,h,d,l,m){return a(),t("div",null,i)}const f=e(o,[["render",s]]);export{u as __pageData,f as default};
