@@ -1,9 +1,14 @@
-export default {
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
     title: "Low Code Doc",
     description: "Round round round.",
     base: '/low-code-docs/',
     themeConfig: {
         siteTitle: "HeartD-BytesD",
+        search: {
+            provider: 'local',
+        },
         sidebar: [
             {
                 text: '引言',
@@ -40,4 +45,4 @@ export default {
         ],
 
     },
-};
+});
