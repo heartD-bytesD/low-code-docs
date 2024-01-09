@@ -115,3 +115,52 @@ export default defineConfig({
 ::: info
 后续还可尝试自动导入组件
 :::
+
+# 组件聚合
+
+在之前的改造中，我们将`index.ts`、`index.vue`和`index.css`聚合为一个`.ts`和一个`.vue`，这样仍要由`.ts`导入`.vue`，然后在包的总配置里再`import`。
+
+能否将`.ts`和`.vue`也聚合一下，减少导入步骤？
+
+这里第一版方案是`JSX`，vite内置了babel，安装插件`@vitejs/plugin-vue-jsx`即可开始使用`JSX`。
+
+```ts
+import {defineConfig} from 'vite'
+import vue from '@vitejs/plugin-vue';
+import vueJsx from "@vitejs/plugin-vue-jsx"; // [!code ++]
+import pkg from './package.json'
+
+export default defineConfig({
+    plugins: [vue(), vueJsx()], // [!code --]
+    plugins: [vue(), vueJsx()], // [!code ++]
+    build: {
+        lib: {
+            entry: './src/index.ts',
+            name: 'core',
+            fileName: `${pkg.name.split('/')[1]}.${pkg.version}`,
+            formats: ['umd'],
+        },
+        cssCodeSplit: true,
+        outDir: '../../apps/editor/public'
+    },
+})
+```
+
+```tsx{4}
+import { createProp } from './utils'
+const render = {
+  setup() {
+    return () => <div>TSX</div>;
+  }
+}
+
+export default {
+  render,
+  editorProps: {
+    title: createProp<FormMap.Input>({
+      defVal: '请输入文字',
+      label: '内容',
+    })
+  }
+};
+```
